@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "HASC Kaithal AI Assistant"
+description = "A professional AI admission assistant for Hartron Advanced Skill Centre (HASC), Kaithal, helping prospective students get verified course, fee, admission, scholarship, and contact information."
+version = "1.0.0"
+id = "artifacts/hasc-assistant"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/", "/api" ]
+localPort = 22702
+
+[services.development]
+run = "pnpm --filter @workspace/hasc-assistant run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/hasc-assistant", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/hasc-assistant/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22702"
+BASE_PATH = "/"

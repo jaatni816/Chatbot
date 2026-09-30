@@ -1,0 +1,1 @@
+- [HASC Next deployment](hasc-next-deploy.md) — HASC API routes must own `/api` so the scaffold API service does not shadow them.
