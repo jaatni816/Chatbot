@@ -149,7 +149,7 @@ async function POST(request) {
         });
         const languageHint = body.language === 'hi' ? '\n\nThe visitor selected Hindi. Prefer Hindi in Devanagari unless their message is clearly Hinglish or English.' : body.language === 'en' ? '\n\nThe visitor selected English. Prefer English unless their message is clearly Hindi or Hinglish.' : '';
         const completion = await groq.chat.completions.create({
-            model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+            model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
             temperature: 0.2,
             max_tokens: 600,
             stream: true,

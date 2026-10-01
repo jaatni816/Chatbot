@@ -23,7 +23,7 @@ Copy `.env.example` to `.env.local` and set `GROQ_API_KEY` for real responses. T
 4. Keep the framework as **Next.js**. Vercel will use `npm run build` (or `pnpm run build`) and `next start` is not needed on Vercel.
 5. In Vercel **Project Settings → Environment Variables**, add:
    - `GROQ_API_KEY` — required, server-only Groq key.
-   - `GROQ_MODEL` — optional; defaults to `llama-3.3-70b-versatile`.
+   - `GROQ_MODEL` — optional; defaults to `openai/gpt-oss-120b`.
    - `LEAD_WEBHOOK_URL` — optional webhook URL for leads and feedback.
    - `RESEND_API_KEY` — optional email delivery.
    - `RESEND_FROM_EMAIL` and `LEAD_EMAIL_TO` — optional Resend overrides.

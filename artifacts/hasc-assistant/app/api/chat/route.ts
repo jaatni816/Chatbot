@@ -82,7 +82,7 @@ export async function POST(request: Request) {
           : '';
 
     const completion = await groq.chat.completions.create({
-      model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+      model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
       temperature: 0.2,
       max_tokens: 600,
       stream: true,

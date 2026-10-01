@@ -8425,7 +8425,7 @@ const _constants = __turbopack_context__.r("[project]/node_modules/.pnpm/next@16
 function getStaleTimeMs(staleTimeSeconds) {
     return Math.max(staleTimeSeconds, 30) * 1000;
 }
-const isOutputExportMode = ("TURBOPACK compile-time value", "development") === 'production' && ("TURBOPACK compile-time value", "standalone") === 'export';
+const isOutputExportMode = ("TURBOPACK compile-time value", "development") === 'production' && ("TURBOPACK compile-time value", void 0) === 'export';
 const MetadataOnlyRequestTree = [
     '',
     {},

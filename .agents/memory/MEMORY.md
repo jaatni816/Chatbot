@@ -1,1 +1,1 @@
-- [HASC Next deployment](hasc-next-deploy.md) — HASC API routes must own `/api` so the scaffold API service does not shadow them.
+- [HASC runtime and routing](hasc-next-deploy.md) — HASC must own `/api`; verify Groq model IDs and keep production serving aligned with Next output mode.

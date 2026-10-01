@@ -5290,7 +5290,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 function getStaleTimeMs(staleTimeSeconds) {
     return Math.max(staleTimeSeconds, 30) * 1000;
 }
-const isOutputExportMode = ("TURBOPACK compile-time value", "development") === 'production' && ("TURBOPACK compile-time value", "standalone") === 'export';
+const isOutputExportMode = ("TURBOPACK compile-time value", "development") === 'production' && ("TURBOPACK compile-time value", void 0) === 'export';
 const MetadataOnlyRequestTree = [
     '',
     {},
