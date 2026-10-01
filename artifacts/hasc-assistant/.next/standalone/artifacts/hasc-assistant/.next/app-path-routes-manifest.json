@@ -3,7 +3,7 @@
   "/_global-error/page": "/_global-error",
   "/embed/page": "/embed",
   "/page": "/",
-  "/api/lead/route": "/api/lead",
+  "/api/feedback/route": "/api/feedback",
   "/api/chat/route": "/api/chat",
-  "/api/feedback/route": "/api/feedback"
+  "/api/lead/route": "/api/lead"
 }

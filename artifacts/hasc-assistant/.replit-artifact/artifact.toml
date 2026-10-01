@@ -15,13 +15,22 @@ localPort = 22702
 run = "pnpm --filter @workspace/hasc-assistant run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/hasc-assistant", "run", "build" ]
-serve = "static"
-publicDir = "artifacts/hasc-assistant/dist/public"
 
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
+[services.production.build]
+args = ["pnpm", "--filter", "@workspace/hasc-assistant", "run", "build"]
+
+[services.production.build.env]
+NODE_ENV = "production"
+
+[services.production.run]
+args = ["pnpm", "--filter", "@workspace/hasc-assistant", "run", "serve"]
+
+[services.production.run.env]
+PORT = "22702"
+NODE_ENV = "production"
+
+[services.production.health.startup]
+path = "/"
 
 [services.env]
 PORT = "22702"
